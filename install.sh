@@ -77,7 +77,7 @@ sed "s/user-name/$NAME/g" "$ASSETS/starship.toml" > ~/.config/starship.toml
 sed "s/user-name/$NAME/g" "$ASSETS/motd" > ~/.config/morphshell
 
 # টেলিগ্রাম কমিউনিটিতে জয়েন করার অপশন
-echo -e "\n${WHITE}${BOLD}Join Our Community ---> \e]8;;https://t.me/all_in_one_63\aClick Here\e]8;;\a${RESET}\n"
+echo -e "\n${WHITE}${BOLD}Join Our Community ---> \e]8;;https://t.me/all_in_one_63\at.me/all_in_one_63\e]8;;\a${RESET}\n"
 
 # সাকসেস মেসেজ এবং টার্মাক্স রিসেট কমান্ড
 echo -e "${WHITE}[✓] Hey ${NAME}, Theme installed successfully!${RESET}"
