@@ -39,8 +39,13 @@ rm -rf $PREFIX/etc/motd
 # ওয়েটিং মেসেজ
 echo -e "${WHITE}[*] Please wait some moments... setting up everything.${RESET}"
 
-# প্যাকেজ আপডেট এবং ডিপেন্ডেন্সি ইন্সটল (সার্ভার এরর ইগনোর করবে)
+# ফিক্স: tte প্যাকেজ পাওয়ার জন্য প্রথমে tur-repo ইন্সটল করা হচ্ছে
 pkg update -y || true
+if ! command -v tur-repo >/dev/null 2>&1; then
+  pkg install tur-repo -y || true
+fi
+
+# এবার বাকি সব ডিপেন্ডেন্সি অটোমেটিক ইন্সটল হবে
 DEPS=(git tte fish eza bat starship)
 
 for p in "${DEPS[@]}"; do
