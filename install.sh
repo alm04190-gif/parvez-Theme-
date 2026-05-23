@@ -72,15 +72,13 @@ cp "$ASSETS/colors.properties" ~/.termux/colors.properties
 sed "s/user-name/$NAME/g" "$ASSETS/starship.toml" > ~/.config/starship.toml
 sed "s/user-name/$NAME/g" "$ASSETS/motd" > ~/.config/morphshell
 
-# টেলিগ্রাম কমিউনিটিতে জয়েন করার অপশন
-echo -e "\n${WHITE}${BOLD}Join Our Community${RESET}"
-# নিচে https://t.me/parvez_63 এর জায়গায় তোমার অরিজিনাল চ্যানেলের লিংকটা বসিয়ে নিও
-echo -e "${WHITE}👉 \e]8;;https://t.me/all_in_one_63\aClick Here\e]8;;\a ${RESET}\n"
+# টেলিগ্রাম কমিউনিটিতে জয়েন করার অপশন (একই লাইনে এবং সিম্বল দিয়ে)
+echo -e "\n${WHITE}${BOLD}Join Our Community ---> \e]8;;https://t.me/all_in_one_63\at.me/all_in_one_63\e]8;;\a${RESET}\n"
 
 # সাকসেস মেসেজ এবং টার্মাক্স রিসেট কমান্ড
 echo -e "${WHITE}[✓] Hey ${NAME}, Theme installed successfully!${RESET}"
 echo -e "${WHITE}[*] Reset your Termux...${RESET}"
 read -rp "Press [ENTER] to restart Termux" DUMMY < /dev/tty
 
-# এন্টার চাপলেই টার্মাক্স অটোমেটিক রিস্টার্ট নিয়ে নতুন থিম চালু করে দিবে
-exec fish
+# এন্টার চাপলেই টার্মাক্স নতুন লগিন সেশন শুরু করবে (একদম ফ্রেশ রিস্টার্ট)
+exec login
